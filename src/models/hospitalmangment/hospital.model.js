@@ -1,14 +1,13 @@
-import mongoose,{Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const hospitalSchema=Schema({
-    name:{
-        type: String,
-        required: true
+const hospitalSchema = Schema(
+  {
+    name: {
+      type: String,
+      required: true,
     },
-    
+  },
+  { timeStamps: true }
+);
 
-    
-
-},{timeStamps: true})
-
-export const Hospital=mongoose.model("Hospital",hospitalSchema)
+export const Hospital = mongoose.model("Hospital", hospitalSchema);
